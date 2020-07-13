@@ -1,0 +1,10 @@
+{
+  "/questions": {
+    "target": "https://opentdb.com/api.php?amount=12",
+    "secure": true,
+    "pathRewrite": {
+      "^/questions": ""
+    },
+    "changeOrigin": true
+  }
+}
