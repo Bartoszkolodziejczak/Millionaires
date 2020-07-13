@@ -1,9 +1,9 @@
 {
-  "/questions": {
-    "target": "https://opentdb.com/api.php?amount=12",
+  "/millionaires": {
+    "target": "https://opentdb.com",
     "secure": true,
     "pathRewrite": {
-      "^/questions": ""
+      "^/millionaires": ""
     },
     "changeOrigin": true
   }

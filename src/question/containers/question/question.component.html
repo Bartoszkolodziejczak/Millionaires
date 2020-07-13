@@ -1,1 +1,5 @@
-<app-question-page [questions]="questions$ | async"></app-question-page>
+<app-question-page [question]="question$ | async"
+                   [username]="username"
+                   (startNewGame)="onStartNewGame()"
+                   (userAnswerIsCorrect)="onUserAnswerIsCorrect($event)">
+</app-question-page>

@@ -1,0 +1,29 @@
+.welcome-container {
+  text-align: right;
+  p {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+.question-container {
+  width: 100%;
+  h4, p {
+   text-align: center;
+  }
+  .answers-container {
+    padding: 1em;
+    text-align: center;
+    .answer-box {
+      width: 44%;
+      margin: .1em;
+      display: inline-block;
+      border: 1px solid red;
+      padding: 2em;
+      &:hover {
+        cursor: pointer;
+        background-color: blueviolet;
+      }
+    }
+  }
+}

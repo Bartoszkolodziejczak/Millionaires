@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { IQuestionItem } from '../../models/iquestion-item';
 
 @Component({
   selector: 'app-question-page',
@@ -6,14 +7,28 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./question-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class QuestionPageComponent implements OnInit {
+export class QuestionPageComponent  {
 
   @Input()
-  questions: any[];
+  question: IQuestionItem;
 
-  constructor() { }
+  @Input()
+  username: string;
 
-  ngOnInit() {
+  @Output()
+  userAnswerIsCorrect = new EventEmitter<boolean>();
+
+  @Output()
+  startNewGame = new EventEmitter<void>();
+
+
+  userAnswer(answer: string, correctAnswer: string) {
+    const isCorrectAnswer: boolean = answer === correctAnswer;
+    this.userAnswerIsCorrect.emit(isCorrectAnswer);
+  }
+
+  newGame() {
+    this.startNewGame.emit();
   }
 
 }

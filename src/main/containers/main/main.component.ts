@@ -10,7 +10,8 @@ export class MainComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    localStorage.removeItem('username');
   }
 
   onStartGame() {

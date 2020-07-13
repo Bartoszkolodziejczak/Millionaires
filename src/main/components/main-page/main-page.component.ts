@@ -13,13 +13,12 @@ export class MainPageComponent implements OnInit {
 
   public username: string;
 
-  constructor() { }
-
   ngOnInit() {
     this.username = '';
   }
 
   startTheGame(): void {
+    localStorage.setItem('username', this.username);
     this.start.emit();
   }
 

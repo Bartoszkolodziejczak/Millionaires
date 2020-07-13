@@ -16,6 +16,14 @@ const routes: Routes = [
     path: 'question',
     loadChildren: '../question/question.module#QuestionModule'
   },
+  {
+    path: 'game-over',
+    loadChildren: '../game-over/game-over.module#GameOverModule'
+  },
+  {
+    path: 'winner',
+    loadChildren: '../win/win.module#WinModule'
+  },
 ];
 
 @NgModule({
