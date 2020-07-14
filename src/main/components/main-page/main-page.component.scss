@@ -22,6 +22,11 @@
       background-color: #4e4e4b;
       color: coral;
     }
+    &:disabled {
+      cursor: no-drop;
+      color: #a59090;
+      background-color: #cacac6;
+    }
   }
 }
 
