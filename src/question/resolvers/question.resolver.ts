@@ -14,7 +14,7 @@ export class QuestionResolver implements Resolve<IQuestionItem[]> {
   resolve() {
     return this.questionService.getQuestions().pipe(
       map((questions: IQuestion[]) =>
-        questions.map((question: IQuestion) => mapIQuestionToIQuestionItem(question)))
+        questions.map((question: IQuestion, index: number) => mapIQuestionToIQuestionItem(question, index)))
     );
   }
 }

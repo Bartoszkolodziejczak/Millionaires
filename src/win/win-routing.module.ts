@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WinComponent } from './components/win/win.component';
+import { WinComponent } from './containers/win/win.component';
 import { InitWinGuard } from './guards/init-win.guard';
 
 

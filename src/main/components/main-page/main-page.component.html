@@ -1,9 +1,14 @@
 <h2>Welcome to a Millionaires!</h2>
-<p>Please enter your name</p>
-<input type="text"
-       [(ngModel)]="username">
 
-<button [disabled]="!usernameValid"
-        (click)="startTheGame()">
-  Start
-</button>
+<div class="username-container">
+  <p>Please enter your name</p>
+  <input type="text"
+         [(ngModel)]="username">
+
+  <button class="start-btn"
+          [disabled]="!usernameValid"
+          (click)="startTheGame()">
+    Start
+  </button>
+</div>
+

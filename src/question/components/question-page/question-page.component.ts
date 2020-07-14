@@ -22,8 +22,11 @@ export class QuestionPageComponent  {
   startNewGame = new EventEmitter<void>();
 
 
-  userAnswer(answer: string, correctAnswer: string) {
+  userAnswer(answer: string, correctAnswer: string, userReward: number) {
     const isCorrectAnswer: boolean = answer === correctAnswer;
+    if (isCorrectAnswer) {
+      localStorage.setItem('userReward', userReward.toString());
+    }
     this.userAnswerIsCorrect.emit(isCorrectAnswer);
   }
 

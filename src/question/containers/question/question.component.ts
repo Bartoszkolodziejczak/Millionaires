@@ -27,6 +27,7 @@ export class QuestionComponent implements OnInit {
 
   ngOnInit() {
 
+    localStorage.removeItem('userReward');
     this.username = localStorage.getItem('username');
 
     const questions$ = this.route.data.pipe(

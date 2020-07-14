@@ -1,5 +1,5 @@
 import { WinComponent } from './win/win.component';
 
-export const components = [
+export const containers = [
   WinComponent
 ];

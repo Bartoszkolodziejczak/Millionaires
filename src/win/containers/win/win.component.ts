@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class WinComponent implements OnDestroy {
 
+  public userReward: string = localStorage.getItem('userReward');
+
   constructor(private router: Router) { }
 
   onPlayAgain() {
@@ -15,6 +17,7 @@ export class WinComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
+    localStorage.removeItem('userReward');
     localStorage.removeItem('win');
   }
 

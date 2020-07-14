@@ -6,13 +6,14 @@
   </button>
 </div>
 
-
+CORRECT ANSWER : {{question.correct_answer}}
 <div class="question-container">
-  <h4>{{question.category}}</h4>
+  <h3>Question {{question.question_number}} for {{question.question_price}} PLN</h3>
+  <h4>Category: {{question.category}}</h4>
   <p>{{question.question}}</p>
   <div class="answers-container">
     <div *ngFor="let answer of question.all_answers"
-         (click)="userAnswer(answer, question.correct_answer)"
+         (click)="userAnswer(answer, question.correct_answer, question.question_price)"
          class="answer-box">
       {{answer}}
     </div>

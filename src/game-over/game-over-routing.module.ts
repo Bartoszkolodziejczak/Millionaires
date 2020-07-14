@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GameOverComponent } from './components/game-over/game-over.component';
+import { GameOverComponent } from './containers/game-over/game-over.component';
 import { InitGameOverGuard } from './guards/init-game-over.guard';
 
 
